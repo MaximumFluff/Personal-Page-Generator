@@ -1,0 +1,6 @@
+# Do not commit virtual environment
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
