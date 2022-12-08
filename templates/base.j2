@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<header>
+  {% include "header.j2" %}
+</header>
+
 <body>
-  <header>
-    {% include "header.j2" %}
-  </header>
   <div id="content">{% block content %} {% endblock %}</div>
 </body>
 

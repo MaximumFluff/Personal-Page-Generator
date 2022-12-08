@@ -3,4 +3,5 @@ bin/
 include/
 lib/
 lib64/
+output/*.html
 pyvenv.cfg
