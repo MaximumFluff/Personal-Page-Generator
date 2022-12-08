@@ -3,5 +3,7 @@ bin/
 include/
 lib/
 lib64/
-output/*.html
 pyvenv.cfg
+
+# Do not commit generated HTML
+output/*.html
