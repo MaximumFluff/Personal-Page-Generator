@@ -3,4 +3,7 @@
 {% block content %}
 <h1>BLOG</h1>
 <p>Blog stuff goes here!</p>
+{% for item in metadata %}
+<a href="blog/{{item.name}}.html">{{ item.date_created }}: {{ item.name }}</a>
+{% endfor %}
 {% endblock %}

@@ -2,8 +2,15 @@
 
 This is a personal project to create my own simple blog with Python and markdown
 
+## How to run
+
+## Activate virtual environment
+
+`source bin/activate`
+
+`python main.py`
+
 ## Libraries used
 
-- python-frontmatter
-- A markdown library
-- jinja2 templating engine
+- jinja2
+- python markdown

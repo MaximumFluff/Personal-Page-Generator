@@ -5,16 +5,43 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Home Page</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Flying Blind on a Rocket Cycle</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+    width: 60vw;
+    background-color: #0A1828;
+    color: #BFA181;
+  }
+
+  a {
+    color: #BFA181;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
 
 <header>
   {% include "header.j2" %}
 </header>
 
 <body>
-  <div id="content">{% block content %} {% endblock %}</div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
 </body>
 
 </html>

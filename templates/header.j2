@@ -1,5 +1,5 @@
 <nav id="header">
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="blog.html">Blog</a>
+  <a href="{% if not_root %}../{%endif %}index.html">Home</a>
+  <a href="{% if not_root %}../{%endif %}resume.html">Resume</a>
+  <a href="{% if not_root %}../{%endif %}blog.html">Blog</a>
 </nav>
