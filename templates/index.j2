@@ -1,14 +1,21 @@
 {% extends "base.j2" %}
 {% block content %}
 <h1>Welcome!</h1>
-<p>This is a test of the jinja2 templating engine!</p>
-<p>A list of languages I know</p>
-<ol>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-  <li>Typescript</li>
-  <li>C#</li>
-  <li>Python</li>
-</ol>
+<div>
+  <img id="avatar" src="images/avatar.jpg" alt="GitHub avatar">
+  <p>Hello! I am a Front-End Developer based in Helsinki, Finland. This is my personal site where I will write
+    self-indulgant blog posts and advertise my skills!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam. Labore pariatur doloribus nisi. Odit eos
+    ratione voluptate numquam ipsum corrupti assumenda quas voluptatem! In excepturi corrupti illum minima ea!</p>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iste commodi quis assumenda excepturi, quam dolor
+    incidunt nulla, sit dolorem aliquid soluta distinctio numquam quas quisquam voluptatem. Quibusdam, fuga eius.</p>
+</div>
+
+<div>
+  <a href="https://github.com/MaximumFluff"><img class="link-icon" src="images/github.svg" alt="GitHub icon"></a>
+  <a href="https://www.linkedin.com/in/alex-jacobs-759b9564/"><img class="link-icon" src="images/linkedin.svg"
+      alt="LinkedIn icon"></a>
+  <a rel="me" href="https://mastodon.sdf.org/@MaximumFluff"><img class="link-icon" src="images/mastodon.svg"
+      alt="Mastodon icon"></a>
+</div>
 {% endblock %}

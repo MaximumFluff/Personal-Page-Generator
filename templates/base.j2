@@ -12,13 +12,16 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
+  html {
+    width: 40vw;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
   body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5rem;
-    margin: 0 auto;
     padding: 0;
-    height: 100vh;
-    width: 60vw;
     background-color: #0A1828;
     color: #BFA181;
   }
@@ -27,9 +30,49 @@
     color: #BFA181;
   }
 
+  a:visited {
+    color: #6d471e;
+  }
+
   nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .link {
+    margin: 0px 10px 0px 10px;
+  }
+
+  .skill {
+    border-radius: 10px;
+    background-color: #144d4b;
+    margin: 5px;
+    padding: 7px;
+  }
+
+  .link-icon {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  #skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #avatar {
+    width: 142px;
+    height: 126px;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(70px at center center);
+    margin-right: 25px;
+  }
+
+  #about-me {
+    display: block;
   }
 </style>
 
