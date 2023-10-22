@@ -12,7 +12,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
   html {
-    width: 40vw;
+    max-width: 900px;
     height: 100vh;
     margin: 0 auto;
   }
@@ -29,6 +29,7 @@
     background-color: #181A24;
     border-radius: 10px;
     padding: 25px;
+    overflow: scroll;
   }
 
   code {
@@ -39,10 +40,6 @@
   a {
     color: #BFA181;
   }
-
-  /*a:visited {
-    color: #6d471e;
-  }*/
 
   nav {
     display: flex;
@@ -64,6 +61,26 @@
   .link-icon {
     width: 50px;
     margin-right: 10px;
+  }
+
+  .resume-container {
+    margin-bottom: 25px;
+  }
+
+  .resume-container> :is(h4, h5) {
+    margin: 0px;
+  }
+
+  .resume-container>p {
+    margin-top: 5px;
+  }
+
+  .resume-description>img {
+    float: left;
+    width: 75px;
+    border-radius: 50%;
+    shape-outside: circle(35px at center center);
+    margin-right: 30px;
   }
 
   #skill-container {

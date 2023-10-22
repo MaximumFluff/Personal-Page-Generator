@@ -1,18 +1,16 @@
 {% extends "base.j2" %}
 {% block content %}
 <h1>Resume</h1>
-<p>I have worked as a software developer for a long time apparently!</p>
+{% for item in resume_data %}
+<div class="resume-container">
+  <h4>{{ item.company }} | {{item.time}} | {{ item.location }}</h4>
+  <h5>{{ item.title }}</h5>
+  <p>{{ item.description }}</p>
+</div>
+{% endfor %}
 <div id="skill-container">
-  <span class="skill">HTML</span>
-  <span class="skill">CSS</span>
-  <span class="skill">JavaScript</span>
-  <span class="skill">TypeScript</span>
-  <span class="skill">Node.js</span>
-  <span class="skill">React.js</span>
-  <span class="skill">React Native</span>
-  <span class="skill">PostgreSQL</span>
-  <span class="skill">Python</span>
-  <span class="skill">Heroku</span>
-  <span class="skill">Markdown</span>
+  {% for skill in skills %}
+  <span class="skill">{{ skill }}</span>
+  {% endfor %}
 </div>
 {% endblock %}

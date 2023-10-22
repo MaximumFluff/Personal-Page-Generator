@@ -5,12 +5,69 @@ import markdown
 
 environment = Environment(loader=FileSystemLoader("templates/"))
 
+# Skills config
+skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "React.js",
+    "React Native",
+    "Redux",
+    "SQL",
+    "Python",
+    "Heroku",
+    "Markdown"
+]
+
 # Main route configuration
 configuration = {
     "index": "index.j2",
     "resume": "resume.j2",
     "blog": "blog.j2",
 }
+
+# Resume configuration
+resume = [
+    {
+        "company": "Kesko",
+        "location": "Helsinki, FIN",
+        "time": "May 2023 - Present",
+        "title": "Full Stack Developer",
+        "image_url": "images/kesko.jpg",
+        "image_alt": "Kesko logo",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+    },
+    {
+        "company": "eMabler",
+        "location": "Helsinki, FIN",
+        "time": "February 2022 - April 2023",
+        "title": "Software Developer",
+        "image_url": "images/emabler.jpg",
+        "image_alt": "eMabler logo",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+    },
+    {
+        "company": "Veikkaus",
+        "location": "Helsinki, FIN",
+        "time": "September 2019 - February 2022",
+        "title": "Junior Developer",
+        "image_url": "images/veikkaus.jpg",
+        "image_alt": "Veikkaus logo",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+    },
+    {
+        "company": "Industry62",
+        "location": "Helsinki, FIN",
+        "time": "January 2019 - May 2019",
+        "title": "Software Developer",
+        "image_url": "images/industry62.jpg",
+        "image_alt": "Industry62 logo",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+    }
+]
 
 def retrieve_metadata():
     folder_path = "./articles"
@@ -64,6 +121,8 @@ def init():
         content = ""
         if key == "blog":
             content = template.render(metadata=metadata)
+        elif key == "resume":
+            content = template.render(resume_data=resume, skills=skills)
         else:
             content = template.render()
         with open(f"output/{key}.html", mode="w", encoding="utf-8") as file:
