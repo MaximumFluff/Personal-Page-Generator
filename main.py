@@ -40,8 +40,7 @@ def generate_articles(metadata):
 
         with open(f"articles/{article['name']}.md", 'r') as f:
             text = f.read()
-            html = markdown.markdown(text)
-            print(f"{html}")
+            html = markdown.markdown(text, extensions=['fenced_code'])
 
         content = template.render(article_content=html, not_root=True)
 
