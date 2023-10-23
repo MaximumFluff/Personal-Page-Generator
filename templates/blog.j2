@@ -4,6 +4,8 @@
 <h1>Blog</h1>
 <hr>
 {% for item in metadata %}
-<a href="blog/{{ item.name }}.html">[{{ item.date_created }}]: {{ item.name }}</a>
+<a href="blog/{{ item.metadata.name }}.html">
+  [{{ item.metadata.date_created }}]: {{ item.metadata.name }}
+</a>
 {% endfor %}
 {% endblock %}

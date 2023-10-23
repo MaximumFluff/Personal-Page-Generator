@@ -1,6 +1,6 @@
 # Personal Page
 
-This is a personal project to create my own simple blog with Python and markdown
+This is a personal project to create my own simple blog utilizing Python and Markdown
 
 ## How to run
 
@@ -17,8 +17,11 @@ This is a personal project to create my own simple blog with Python and markdown
 
 ## TODO
 
-- [ ] Add configuration variable for "About me" information on front page
-- [ ] Create dataclasses for configuration variables
+- [ ] Add configuration value for "About me" information on front page
+- [ ] Change config variables to point to markdown files?
+- [ ] Create dataclass for parsed JSON
 - [x] Export all configuration variables to JSON files
 - [x] Create function for generating configuration information from JSON
+- [ ] Clean up code, organize functions better for readability
 - [ ] Add configuration data for CSS values to facilitate easy theme changes
+- [ ] Change logic for created_by, updated_by for articles (Markdown metadata?)

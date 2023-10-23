@@ -1,6 +1,12 @@
+date_created: 22/10/2023
+date_modified: 23/10/2023
+
 # Hello World
 
 ---
+
+Published on 22/10/2023<br/>
+Last modified at 23/10/2023
 
 Today, it seems that any developer that is anybody has their own personal site. Of course, not wanting to be left out; I had to do the same. I also thought it would be nice for me to have a place to collect my ramblings, assorted writings, resume, contact information, etc.
 
@@ -19,8 +25,11 @@ One can of monster and 100+ lines of Python later (which most certainly can be c
 
 Working with pure HTML with Jinja2 templating was a refreshing change of pace. The developers who insist on using React for something as simple as a recipe blog should follow my inspiring example and return to simpler methods of site design.
 
-To conlude this initial post, this small project illustrated three things to me:
+To conlude this initial post, this small project illustrated several things to me:
 
 - I should have been using Emmet abbreviations with VSCode. To think, I was manually typing in HTML like some kind of simpleton!
-- Design is one hard thing to get right
-- The way boolean values are capitalized in Python irritates me an irrational amount
+- Design is the hardest thing to get right
+- The way boolean values are capitalized in Python irritates me to an irrational degree
+- The development comfort and speed utilizing Jinja2 templating for the front-end has been delightful (no npm_modules to worry about is also a nice change of pace)
+- It would be very nice if JSON could handle comments (it would also be nice if I wasn't too lazy to learn another config file format that supported them)
+- Apparently there is no good way to get file creation date metadata on Linux with Python for some technical reason currently beyond my understanding (atleast, not guaranteed to work on all Linux/Unix systems)
