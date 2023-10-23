@@ -24,4 +24,4 @@ This is a personal project to create my own simple blog utilizing Python and Mar
 - [x] Create function for generating configuration information from JSON
 - [ ] Clean up code, organize functions better for readability
 - [ ] Add configuration data for CSS values to facilitate easy theme changes
-- [ ] Change logic for created_by, updated_by for articles (Markdown metadata?)
+- [x] Change logic for created_by, updated_by for articles (Markdown metadata?)
