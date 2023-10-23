@@ -2,72 +2,9 @@ from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 import os
 import markdown
+import json
 
 environment = Environment(loader=FileSystemLoader("templates/"))
-
-# Skills config
-skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Node.js",
-    "Express.js",
-    "React.js",
-    "React Native",
-    "Redux",
-    "SQL",
-    "Python",
-    "Heroku",
-    "Markdown"
-]
-
-# Main route configuration
-configuration = {
-    "index": "index.j2",
-    "resume": "resume.j2",
-    "blog": "blog.j2",
-}
-
-# Resume configuration
-resume = [
-    {
-        "company": "Kesko",
-        "location": "Helsinki, FIN",
-        "time": "May 2023 - Present",
-        "title": "Full Stack Developer",
-        "image_url": "images/kesko.jpg",
-        "image_alt": "Kesko logo",
-        "description": "Working as part of Team Sweden I help improve and maintain K-Rauta.se"
-    },
-    {
-        "company": "eMabler",
-        "location": "Helsinki, FIN",
-        "time": "February 2022 - April 2023",
-        "title": "Software Developer",
-        "image_url": "images/emabler.jpg",
-        "image_alt": "eMabler logo",
-        "description": "For all product UI's I maintained, implemented redesigns and added new features based on customer feedback.\n\nI also worked on bugfixes for both ends of the stack, new features for the C# backend and creating internal documentation for new features and architecture choices"
-    },
-    {
-        "company": "Veikkaus",
-        "location": "Helsinki, FIN",
-        "time": "September 2019 - February 2022",
-        "title": "Junior Developer",
-        "image_url": "images/veikkaus.jpg",
-        "image_alt": "Veikkaus logo",
-        "description": "Worked in the front-end team working on re-implementing the app in React Native. Responsibilities included implementing redesigns of the UI and creating native versions of various games based on their web counterparts."
-    },
-    {
-        "company": "Industry62",
-        "location": "Helsinki, FIN",
-        "time": "January 2019 - May 2019",
-        "title": "Software Developer",
-        "image_url": "images/industry62.jpg",
-        "image_alt": "Industry62 logo",
-        "description": "As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.\n\nYou can read more about the project here: https://www.industry62.com/case-stories/2019/5/8/myhealthhand"
-    }
-]
 
 def retrieve_metadata():
     folder_path = "./articles"
@@ -109,6 +46,11 @@ def generate_articles(metadata):
 
 
 def init():
+    print("Importing JSON data...")
+    configuration = None
+    with open("configuration.json", mode="r", encoding="utf-8") as file:
+        configuration = json.load(file)
+    print("JSON data imported...")
     print("Generating static site...")
     if os.path.exists("output") is False:
         os.makedirs("output")
@@ -116,13 +58,13 @@ def init():
 
     metadata = retrieve_metadata()
 
-    for key, value in configuration.items():
+    for key, value in configuration["routes"].items():
         template = environment.get_template(value)
         content = ""
         if key == "blog":
             content = template.render(metadata=metadata)
         elif key == "resume":
-            content = template.render(resume_data=resume, skills=skills)
+            content = template.render(resume_data=configuration["resume"], skills=configuration["skills"])
         else:
             content = template.render()
         with open(f"output/{key}.html", mode="w", encoding="utf-8") as file:

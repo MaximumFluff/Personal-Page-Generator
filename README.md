@@ -19,6 +19,6 @@ This is a personal project to create my own simple blog with Python and markdown
 
 - [ ] Add configuration variable for "About me" information on front page
 - [ ] Create dataclasses for configuration variables
-- [ ] Export all configuration variables to JSON files
-- [ ] Create function for generating configuration information from JSON
+- [x] Export all configuration variables to JSON files
+- [x] Create function for generating configuration information from JSON
 - [ ] Add configuration data for CSS values to facilitate easy theme changes
