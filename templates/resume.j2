@@ -1,6 +1,7 @@
 {% extends "base.j2" %}
 {% block content %}
 <h1>Resume</h1>
+<hr>
 {% for item in resume_data %}
 <div class="resume-container">
   <h4>{{ item.company }} | {{item.time}} | {{ item.location }}</h4>

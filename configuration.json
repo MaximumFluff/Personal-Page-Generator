@@ -1,0 +1,59 @@
+{
+  "resume": [
+    {
+      "company": "Kesko",
+      "location": "Helsinki, FIN",
+      "time": "May 2023 - Present",
+      "title": "Full Stack Developer",
+      "image_url": "images/kesko.jpg",
+      "image_alt": "Kesko logo",
+      "description": "Working as part of Team Sweden I help improve and maintain K-Rauta.se"
+    },
+    {
+      "company": "eMabler",
+      "location": "Helsinki, FIN",
+      "time": "February 2022 - April 2023",
+      "title": "Software Developer",
+      "image_url": "images/emabler.jpg",
+      "image_alt": "eMabler logo",
+      "description": "For all product UI's I maintained, implemented redesigns and added new features based on customer feedback.\n\nI also worked on bugfixes for both ends of the stack, new features for the C# backend and creating internal documentation for new features and architecture choices"
+    },
+    {
+      "company": "Veikkaus",
+      "location": "Helsinki, FIN",
+      "time": "September 2019 - February 2022",
+      "title": "Junior Developer",
+      "image_url": "images/veikkaus.jpg",
+      "image_alt": "Veikkaus logo",
+      "description": "Worked in the front-end team working on re-implementing the app in React Native. Responsibilities included implementing redesigns of the UI and creating native versions of various games based on their web counterparts."
+    },
+    {
+      "company": "Industry62",
+      "location": "Helsinki, FIN",
+      "time": "January 2019 - May 2019",
+      "title": "Software Developer",
+      "image_url": "images/industry62.jpg",
+      "image_alt": "Industry62 logo",
+      "description": "As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.\n\nYou can read more about the project here: https://www.industry62.com/case-stories/2019/5/8/myhealthhand"
+    }
+  ],
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "React.js",
+    "React Native",
+    "Redux",
+    "SQL",
+    "Python",
+    "Heroku"
+  ],
+  "routes": {
+    "index": "index.j2",
+    "resume": "resume.j2",
+    "blog": "blog.j2"
+  }
+}

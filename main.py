@@ -38,7 +38,7 @@ resume = [
         "title": "Full Stack Developer",
         "image_url": "images/kesko.jpg",
         "image_alt": "Kesko logo",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+        "description": "Working as part of Team Sweden I help improve and maintain K-Rauta.se"
     },
     {
         "company": "eMabler",
@@ -47,7 +47,7 @@ resume = [
         "title": "Software Developer",
         "image_url": "images/emabler.jpg",
         "image_alt": "eMabler logo",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+        "description": "For all product UI's I maintained, implemented redesigns and added new features based on customer feedback.\n\nI also worked on bugfixes for both ends of the stack, new features for the C# backend and creating internal documentation for new features and architecture choices"
     },
     {
         "company": "Veikkaus",
@@ -56,7 +56,7 @@ resume = [
         "title": "Junior Developer",
         "image_url": "images/veikkaus.jpg",
         "image_alt": "Veikkaus logo",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+        "description": "Worked in the front-end team working on re-implementing the app in React Native. Responsibilities included implementing redesigns of the UI and creating native versions of various games based on their web counterparts."
     },
     {
         "company": "Industry62",
@@ -65,7 +65,7 @@ resume = [
         "title": "Software Developer",
         "image_url": "images/industry62.jpg",
         "image_alt": "Industry62 logo",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur illo laboriosam quidem omnis quasi, temporibus aut ducimus sequi doloribus saepe asperiores debitis, esse minima iste laudantium quaerat deserunt dolore."
+        "description": "As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.\n\nYou can read more about the project here: https://www.industry62.com/case-stories/2019/5/8/myhealthhand"
     }
 ]
 
