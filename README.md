@@ -1,6 +1,8 @@
 # Personal Page
 
-This is a personal project to create my own simple blog utilizing Python and Markdown
+This is a personal project to create my own simple blog utilizing Python and Markdown as a simple static site generator.
+
+Code is linted and formatted using Ruff.
 
 ## How to run
 
@@ -10,6 +12,14 @@ This is a personal project to create my own simple blog utilizing Python and Mar
 
 `python main.py`
 
+## Folder structure
+
+|Folder|Description|
+|----|----|
+|/output|Contains images and the generated HTML files|
+|/templates|Contains Jinja2 template files|
+|/articles|Contains markdown files for blog posts|
+
 ## Libraries used
 
 - Jinja2
@@ -17,11 +27,11 @@ This is a personal project to create my own simple blog utilizing Python and Mar
 
 ## TODO
 
-- [ ] Add configuration value for "About me" information on front page
 - [ ] Change config variables to point to markdown files?
 - [ ] Create dataclass for parsed JSON
 - [x] Export all configuration variables to JSON files
 - [x] Create function for generating configuration information from JSON
-- [ ] Clean up code, organize functions better for readability
+- [x] Clean up code, organize functions better for readability
 - [ ] Add configuration data for CSS values to facilitate easy theme changes
 - [x] Change logic for created_by, updated_by for articles (Markdown metadata?)
+- [ ] Type annotations?
