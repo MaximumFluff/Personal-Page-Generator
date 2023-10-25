@@ -7,7 +7,7 @@
       "title": "Full Stack Developer",
       "image_url": "images/kesko.jpg",
       "image_alt": "Kesko logo",
-      "description": "As part of Team Sweden I work to help improve and maintain K-Rauta.se on both sides of the stack"
+      "description": "As part of the Kesko team I work tirelessy to help improve and maintain K-Rauta.se on both ends of the stack"
     },
     {
       "company": "eMabler",
@@ -34,7 +34,7 @@
       "title": "Software Developer",
       "image_url": "images/industry62.jpg",
       "image_alt": "Industry62 logo",
-      "description": "As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.\n\nYou can read more about the project here: https://www.industry62.com/case-stories/2019/5/8/myhealthhand"
+      "description": "As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.\n\nYou can read more about the project <a href='https://www.industry62.com/case-stories/2019/5/8/myhealthhand' target='_blank'>here<a/>"
     }
   ],
   "skills": [
@@ -50,7 +50,8 @@
     "SQL",
     "Python",
     "Heroku",
-    "Markdown"
+    "Markdown",
+    "Linux"
   ],
   "routes": {
     "index": "index.j2",

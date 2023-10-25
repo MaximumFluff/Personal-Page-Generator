@@ -55,6 +55,7 @@ def generate_articles(data):
 
 
 def import_json():
+    """Import and parse JSON data configuration file"""
     with open("configuration.json", mode="r", encoding="utf-8") as file:
         return json.load(file)
 

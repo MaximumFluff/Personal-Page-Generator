@@ -4,8 +4,8 @@
 <hr>
 {% for item in resume_data %}
 <div class="resume-container">
-  <h4>{{ item.company }} | {{item.time}} | {{ item.location }}</h4>
-  <h5>{{ item.title }}</h5>
+  <h3>{{ item.company }} | {{item.time}} | {{ item.location }}</h3>
+  <h4>{{ item.title }}</h4>
   <p>{{ item.description }}</p>
 </div>
 {% endfor %}
