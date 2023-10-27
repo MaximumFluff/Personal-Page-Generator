@@ -1,11 +1,18 @@
 {% extends "base.j2" %}
 
 {% block content %}
-<h1>Blog</h1>
+<h1>$ ls /blog</h1>
 <hr>
-{% for item in metadata %}
-<a href="blog/{{ item.metadata.name }}.html">
-  [{{ item.metadata.date_created }}]: {{ item.metadata.name }}
-</a>
-{% endfor %}
+<ul id="article-list">
+  {% for item in metadata %}
+  <li>
+    <span>
+      [{{ item.metadata.date_created }}] -
+    </span>
+    <a href="blog/{{ item.metadata.name }}.html">
+      {{ item.metadata.name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}

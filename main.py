@@ -1,6 +1,7 @@
 """ Import list """
 import json
 import os
+from datetime import datetime
 
 import markdown
 from jinja2 import Environment, FileSystemLoader
@@ -8,14 +9,34 @@ from jinja2 import Environment, FileSystemLoader
 environment = Environment(loader=FileSystemLoader("templates/"))
 
 
+def init():
+    """Entry point for script"""
+    configuration = import_json()
+    articles = generate_article_data()
+
+    for key, value in configuration["routes"].items():
+        template = environment.get_template(value)
+        content = ""
+        if key == "blog":
+            content = template.render(metadata=articles)
+        elif key == "resume":
+            content = template.render(
+                resume_data=configuration["resume"], skills=configuration["skills"]
+            )
+        else:
+            content = template.render()
+        with open(f"output/{key}.html", mode="w", encoding="utf-8") as file:
+            file.write(content)
+    generate_articles(articles)
+
+
 def get_article_list():
     """Return list of file paths to blog article markdown files"""
     folder_path = "./articles"
     directory_contents = os.listdir(folder_path)
-    articles = [
+    return [
         os.path.abspath(os.path.join(folder_path, file)) for file in directory_contents
     ]
-    return articles
 
 
 def generate_article_data():
@@ -42,7 +63,11 @@ def generate_article_data():
                     "content": template.render(article_content=html, not_root=True),
                 }
             )
-    return return_list
+    return sorted(
+        return_list,
+        key=lambda x: datetime.strptime(x["metadata"]["date_created"], "%d/%m/%Y"),
+        reverse=True,
+    )
 
 
 def generate_articles(data):
@@ -58,27 +83,6 @@ def import_json():
     """Import and parse JSON data configuration file"""
     with open("configuration.json", mode="r", encoding="utf-8") as file:
         return json.load(file)
-
-
-def init():
-    """Entry point for script"""
-    configuration = import_json()
-    articles = generate_article_data()
-
-    for key, value in configuration["routes"].items():
-        template = environment.get_template(value)
-        content = ""
-        if key == "blog":
-            content = template.render(metadata=articles)
-        elif key == "resume":
-            content = template.render(
-                resume_data=configuration["resume"], skills=configuration["skills"]
-            )
-        else:
-            content = template.render()
-        with open(f"output/{key}.html", mode="w", encoding="utf-8") as file:
-            file.write(content)
-    generate_articles(articles)
 
 
 if __name__ == "__main__":
