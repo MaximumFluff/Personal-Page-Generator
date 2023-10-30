@@ -1,11 +1,5 @@
 date_created: 27/10/2023
-date_modified: 
-
-# Rust-y terminal application replacements
-
----
-
-Published on 27/10/2023<br/>
+date_modified: 30/10/2023
 
 Supposedly well informed people have informed me that Rust is the future of low level programming. Although, to be fair; compared to JavaScript pretty much everything else is low level programming at this point, so what would I know about it? (the joke being that JavaScript uses a lot of memory)
 

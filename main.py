@@ -10,7 +10,7 @@ environment = Environment(loader=FileSystemLoader("templates/"))
 
 
 def init():
-    """Entry point for script"""
+    """Entry point for script, render the base routes"""
     configuration = import_json()
     articles = generate_article_data()
 
@@ -41,31 +41,37 @@ def get_article_list():
 
 def generate_article_data():
     """
-    Generate list of blog article data from markdown andit's included metadata
+    Generate list of blog article data from markdown and included metadata
     """
     articles = get_article_list()
     template = environment.get_template("article.j2")
     return_list = []
 
     for article in articles:
-        with open(article, mode="r", encoding="utf-8") as f:
+        with open(article, mode="r", encoding="utf-8") as file:
             # Create instance of markdown class, generate content and metadata
             md = markdown.Markdown(extensions=["fenced_code", "meta"])
-            text = f.read()
+            text = file.read()
             html = md.convert(text)
             return_list.append(
                 {
-                    "metadata": {
-                        "name": os.path.basename(article).split(".")[0],
-                        "date_created": md.Meta["date_created"][0],  # type: ignore
-                        "date_modified": md.Meta["date_modified"][0],  # type: ignore
-                    },
-                    "content": template.render(article_content=html, not_root=True),
+                    "name": os.path.basename(article).split(".")[0],
+                    "date_created": md.Meta["date_created"][0],  # type: ignore
+                    "content": template.render(
+                        article_name=os.path.basename(article).split(".")[0],
+                        date_created=md.Meta["date_created"][0],  # type: ignore
+                        date_modified=md.Meta.get("date_modified")[0]  # type: ignore
+                        if md.Meta.get("date_modified")  # type: ignore
+                        else "",
+                        article_content=html,
+                        not_root=True,
+                    ),
                 }
             )
+    # Sort list by article creation date from latest to oldest
     return sorted(
         return_list,
-        key=lambda x: datetime.strptime(x["metadata"]["date_created"], "%d/%m/%Y"),
+        key=lambda x: datetime.strptime(x["date_created"], "%d/%m/%Y"),
         reverse=True,
     )
 
@@ -74,7 +80,7 @@ def generate_articles(data):
     """Generate HTML files from parsed article data"""
     for item in data:
         with open(
-            f"output/blog/{item['metadata']['name']}.html", mode="w", encoding="utf-8"
+            f"output/blog/{item['name']}.html", mode="w", encoding="utf-8"
         ) as file:
             file.write(item["content"])
 

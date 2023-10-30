@@ -7,10 +7,10 @@
   {% for item in metadata %}
   <li>
     <span>
-      [{{ item.metadata.date_created }}] -
+      [{{ item.date_created }}] -
     </span>
-    <a href="blog/{{ item.metadata.name }}.html">
-      {{ item.metadata.name }}
+    <a href="blog/{{ item.name }}.html">
+      {{ item.name }}
     </a>
   </li>
   {% endfor %}

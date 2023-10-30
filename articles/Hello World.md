@@ -1,13 +1,6 @@
 date_created: 22/10/2023
 date_modified: 23/10/2023
 
-# Hello World
-
----
-
-Published on 22/10/2023<br/>
-Last modified at 23/10/2023
-
 Today, it seems that any developer that is anybody has their own personal site. Of course, not wanting to be left out; I had to do the same. I also thought it would be nice for me to have a place to collect my ramblings, assorted writings, resume, contact information, etc.
 
 The main problem with any personal project is actually summoning the herculean will to finish the bloody thing; somehow I managed to accomplish this.

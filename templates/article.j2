@@ -2,6 +2,14 @@
 
 {% block content %}
 <article>
+  <h1>{{ article_name }}</h1>
+  <hr />
+  <span>
+    Published on {{ date_created }}<br />
+    {% if date_modified %}
+    Last modified at {{ date_modified }}
+    {% endif %}
+  </span>
   {{ article_content }}
 </article>
 {% endblock %}
