@@ -28,7 +28,7 @@ Code is linted and formatted using Ruff.
 ## TODO
 
 - [ ] Change config variables to point to markdown files?
-- [ ] Handle missing metadata params in markdown files
+- [x] Handle missing metadata params in markdown files
 - [ ] Create dataclass for parsed JSON
 - [x] Export all configuration variables to JSON files
 - [x] Create function for generating configuration information from JSON

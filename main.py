@@ -55,10 +55,11 @@ def generate_article_data():
             html = md.convert(text)
             return_list.append(
                 {
-                    "name": os.path.basename(article).split(".")[0],
+                    "file_name": os.path.basename(article).split(".")[0],
+                    "article_name": md.Meta["article_name"][0],  # type: ignore
                     "date_created": md.Meta["date_created"][0],  # type: ignore
                     "content": template.render(
-                        article_name=os.path.basename(article).split(".")[0],
+                        article_name=md.Meta["article_name"][0],  # type: ignore
                         date_created=md.Meta["date_created"][0],  # type: ignore
                         date_modified=md.Meta.get("date_modified")[0]  # type: ignore
                         if md.Meta.get("date_modified")  # type: ignore
@@ -80,7 +81,7 @@ def generate_articles(data):
     """Generate HTML files from parsed article data"""
     for item in data:
         with open(
-            f"output/blog/{item['name']}.html", mode="w", encoding="utf-8"
+            f"output/blog/{item['file_name']}.html", mode="w", encoding="utf-8"
         ) as file:
             file.write(item["content"])
 

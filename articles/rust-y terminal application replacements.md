@@ -1,3 +1,4 @@
+article_name: Rust-y terminal application replacements
 date_created: 27/10/2023
 date_modified: 30/10/2023
 

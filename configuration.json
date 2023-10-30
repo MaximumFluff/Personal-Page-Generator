@@ -51,6 +51,7 @@
     "Python",
     "Heroku",
     "Markdown",
+    "Jinja2",
     "Linux"
   ],
   "routes": {
