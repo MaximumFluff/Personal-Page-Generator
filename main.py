@@ -25,7 +25,7 @@ def init():
             )
         else:
             content = template.render()
-        with open(f"output/{key}.html", mode="w", encoding="utf-8") as file:
+        with open(f"public/{key}.html", mode="w", encoding="utf-8") as file:
             file.write(content)
     generate_articles(articles)
 
@@ -81,7 +81,7 @@ def generate_articles(data):
     """Generate HTML files from parsed article data"""
     for item in data:
         with open(
-            f"output/blog/{item['file_name']}.html", mode="w", encoding="utf-8"
+            f"public/blog/{item['file_name']}.html", mode="w", encoding="utf-8"
         ) as file:
             file.write(item["content"])
 

@@ -27,9 +27,8 @@ Code is linted and formatted using Ruff.
 
 ## TODO
 
-- [ ] Change config variables to point to markdown files?
+- [ ] Reconfigure configuration.json to markdown files instead?
 - [x] Handle missing metadata params in markdown files
-- [ ] Create dataclass for parsed JSON
 - [x] Export all configuration variables to JSON files
 - [x] Create function for generating configuration information from JSON
 - [x] Clean up code, organize functions better for readability

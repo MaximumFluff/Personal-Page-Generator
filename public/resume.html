@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Flying Blind on a Rocket Cycle</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
+  html {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    background-color: #0A1828;
+    color: #BFA181;
+    display: flex;
+    flex-direction: column;
+  }
+
+  code,
+  pre {
+    background-color: #181A24;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+
+  pre {
+    padding: 20px;
+  }
+
+  a {
+    color: #BFA181;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  hr {
+    margin: 0px 0px 15px 0px;
+    color: #BFA181;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin: 5px 0px 5px 0px;
+  }
+
+  footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .link {
+    margin: 0px 10px 0px 10px;
+  }
+
+  .skill {
+    border-radius: 10px;
+    background-color: #355352;
+    margin: 5px;
+    padding: 7px;
+  }
+
+  .link-icon {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .resume-container {
+    margin-bottom: 25px;
+  }
+
+  .resume-container> :is(h4, h5, p) {
+    margin: 0px;
+  }
+
+  .resume-description>img {
+    float: left;
+    width: 75px;
+    border-radius: 50%;
+    shape-outside: circle(35px at center center);
+    margin-right: 30px;
+  }
+
+  #skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #avatar {
+    width: 142px;
+    height: 126px;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(70px at center center);
+    margin-right: 40px;
+  }
+
+  #about-me {
+    display: block;
+  }
+
+  #article-list {
+    list-style-type: none;
+    padding: 0px;
+  }
+</style>
+
+<body>
+  <div id="content">
+    <header>
+      <nav>
+  <a class="link" href="index.html">About</a>
+  -
+  <a class="link" href="resume.html">Resume</a>
+  -
+  <a class="link" href="blog.html">Blog</a>
+  -
+  <a class="link" href="https://github.com/MaximumFluff" target="_blank">GitHub</a>
+  -
+  <a class="link" href="https://www.linkedin.com/in/alex-jacobs-759b9564/" target="_blank">LinkedIn</a>
+  -
+  <a class="link" href="https://mastodon.sdf.org/@MaximumFluff" rel="me" target="_blank">Mastodon</a>
+</nav>
+    </header>
+    
+<h1>$ cat resume.txt</h1>
+<hr>
+
+<div class="resume-container">
+  <h3>Kesko | May 2023 - Present | Helsinki, FIN</h3>
+  <h4>Full Stack Developer</h4>
+  <p>As part of the Kesko team I work tirelessy to help improve and maintain K-Rauta.se on both ends of the stack</p>
+</div>
+
+<div class="resume-container">
+  <h3>eMabler | February 2022 - April 2023 | Helsinki, FIN</h3>
+  <h4>Software Developer</h4>
+  <p>For all product UI's I maintained, implemented redesigns and added new features based on customer feedback.
+
+I also worked on bugfixes for both ends of the stack, new features for the C# backend and creating internal documentation for new features and architecture choices</p>
+</div>
+
+<div class="resume-container">
+  <h3>Veikkaus | September 2019 - February 2022 | Helsinki, FIN</h3>
+  <h4>Junior Developer</h4>
+  <p>Worked in the front-end team working on re-implementing the app in React Native. Responsibilities included implementing redesigns of the UI and creating native versions of various games based on their web counterparts.</p>
+</div>
+
+<div class="resume-container">
+  <h3>Industry62 | January 2019 - May 2019 | Helsinki, FIN</h3>
+  <h4>Software Developer</h4>
+  <p>As part of Industry62 my main task involved front-end programming work for a pair of React Native mobile apps designed to deliver digital health services for pregnant women in Africa.
+
+You can read more about the project <a href='https://www.industry62.com/case-stories/2019/5/8/myhealthhand' target='_blank'>here<a/></p>
+</div>
+
+<div id="skill-container">
+  
+  <span class="skill">HTML</span>
+  
+  <span class="skill">CSS</span>
+  
+  <span class="skill">JavaScript</span>
+  
+  <span class="skill">TypeScript</span>
+  
+  <span class="skill">Node.js</span>
+  
+  <span class="skill">Express.js</span>
+  
+  <span class="skill">React.js</span>
+  
+  <span class="skill">React Native</span>
+  
+  <span class="skill">Redux</span>
+  
+  <span class="skill">SQL</span>
+  
+  <span class="skill">Python</span>
+  
+  <span class="skill">Heroku</span>
+  
+  <span class="skill">Markdown</span>
+  
+  <span class="skill">Jinja2</span>
+  
+  <span class="skill">Linux</span>
+  
+</div>
+
+    <footer>
+      <p>© Helsinki Softworks 2023 - "We Create Obfuscation"</p>
+    </footer>
+</body>
+</div>
+
+</html>

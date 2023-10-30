@@ -136,10 +136,45 @@
 <body>
   <div id="content">
     <header>
-      {% include "header.j2" %}
+      <nav>
+  <a class="link" href="index.html">About</a>
+  -
+  <a class="link" href="resume.html">Resume</a>
+  -
+  <a class="link" href="blog.html">Blog</a>
+  -
+  <a class="link" href="https://github.com/MaximumFluff" target="_blank">GitHub</a>
+  -
+  <a class="link" href="https://www.linkedin.com/in/alex-jacobs-759b9564/" target="_blank">LinkedIn</a>
+  -
+  <a class="link" href="https://mastodon.sdf.org/@MaximumFluff" rel="me" target="_blank">Mastodon</a>
+</nav>
     </header>
-    {% block content %}
-    {% endblock %}
+    
+<h1>$ ls /blog</h1>
+<hr>
+<ul id="article-list">
+  
+  <li>
+    <span>
+      [27/10/2023] -
+    </span>
+    <a href="blog/rust-y terminal application replacements.html">
+      Rust-y terminal application replacements
+    </a>
+  </li>
+  
+  <li>
+    <span>
+      [22/10/2023] -
+    </span>
+    <a href="blog/Hello World.html">
+      Hello World!
+    </a>
+  </li>
+  
+</ul>
+
     <footer>
       <p>© Helsinki Softworks 2023 - "We Create Obfuscation"</p>
     </footer>
