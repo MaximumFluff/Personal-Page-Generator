@@ -50,7 +50,7 @@ def generate_article_data():
     for article in articles:
         with open(article, mode="r", encoding="utf-8") as file:
             # Create instance of markdown class, generate content and metadata
-            md = markdown.Markdown(extensions=["fenced_code", "meta"])
+            md = markdown.Markdown(extensions=["codehilite", "fenced_code", "meta"])
             text = file.read()
             html = md.convert(text)
             return_list.append(
