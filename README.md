@@ -32,6 +32,6 @@ Code is linted and formatted using Ruff.
 - [x] Export all configuration variables to JSON files
 - [x] Create function for generating configuration information from JSON
 - [x] Clean up code, organize functions better for readability
-- [ ] Add configuration data for CSS values to facilitate easy theme changes
+- [x] Add configuration data for CSS values to facilitate easy theme changes
 - [x] Change logic for created_by, updated_by for articles (Markdown metadata?)
 - [ ] Type annotations?
