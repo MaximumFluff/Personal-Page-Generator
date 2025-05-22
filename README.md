@@ -6,11 +6,15 @@ Code is linted and formatted using Ruff.
 
 ## How to run
 
+`python -m venv .`
+
 `source bin/activate`
 
 `pip install -r requirements.txt`
 
 `python main.py`
+
+`deactivate`
 
 ## Folder structure
 
@@ -35,3 +39,4 @@ Code is linted and formatted using Ruff.
 - [x] Add configuration data for CSS values to facilitate easy theme changes
 - [x] Change logic for created_by, updated_by for articles (Markdown metadata?)
 - [ ] Type annotations?
+- [ ] Fix folder structure
