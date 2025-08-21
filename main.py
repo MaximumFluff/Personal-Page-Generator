@@ -1,4 +1,11 @@
-""" Import list """
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "jinja2",
+#     "markdown",
+# ]
+# ///
+
 import json
 import os
 from datetime import datetime
@@ -44,7 +51,7 @@ def generate_article_data():
     Generate list of blog article data from markdown and included metadata
     """
     articles = get_article_list()
-    template = environment.get_template("article.j2")
+    template = environment.get_template("article.jinja2")
     return_list = []
 
     for article in articles:

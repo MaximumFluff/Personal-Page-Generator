@@ -6,15 +6,11 @@ Code is linted and formatted using Ruff.
 
 ## How to run
 
-`python -m venv .`
+This project is configured using the `uv` package manager for python
 
-`source bin/activate`
+* Install `uv` from [here](https://docs.astral.sh/uv/)
 
-`pip install -r requirements.txt`
-
-`python main.py`
-
-`deactivate`
+* Inside the project folder, run `uv run main.py` in the terminal
 
 ## Folder structure
 

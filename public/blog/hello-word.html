@@ -41,9 +41,9 @@
   <p>Today, it seems that any developer that is anybody has their own personal site. Of course, not wanting to be left out; I had to do the same. I also thought it would be nice for me to have a place to collect my ramblings, assorted writings, resume, contact information, etc.</p>
 <p>The main problem with any personal project is actually summoning the herculean will to finish the bloody thing; somehow I managed to accomplish this.</p>
 <p>I started off investigating multiple Static Site Generators, eventually giving up and realizing the scope of my design would not require anything nearly that complicated. Sensing an opportunity to refresh my Python skills; I realized with only two packages I could build a script that would accomplish all my needs quickly and simply.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
-<span class="kn">import</span> <span class="nn">markdown</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-python">from jinja2 import Environment, FileSystemLoader
+import markdown
+</code></pre>
 
 <p>With those two lines I was pretty much 70% of the way there (Maybe one day I will have the patience and lack of better judgement to write my own Markdown parser, but not today)</p>
 <p>One can of monster and 100+ lines of Python later (which most certainly can be cut down and cleaned up which I intend on doing) I was able to service all of my needs easily. I'm sure with time it will expand as the old feature creature creeps up on me and I decide that my personal blog needs to support a chatroom or whatever.</p>

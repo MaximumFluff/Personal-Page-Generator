@@ -55,8 +55,8 @@
     "Linux"
   ],
   "routes": {
-    "index": "index.j2",
-    "resume": "resume.j2",
-    "blog": "blog.j2"
+    "index": "index.jinja2",
+    "resume": "resume.jinja2",
+    "blog": "blog.jinja2"
   }
 }
