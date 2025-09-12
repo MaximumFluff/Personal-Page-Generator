@@ -1,8 +1,6 @@
 article_name: The Intern Interviewing Experience
 date_created: 22/05/2025
 
-# Intern interviews
-
 As part of my duties at Kesko I recently had the opportunity to participate in the interview process for a new intern. The way the industry is set up currently, everybody wants a senior but nobody is really willing to take a chance on somebody so that they could one day become a senior. So I thought it was nice that we found the allowance for an intern position. I found the interviewing experience to be quite valuable and want to capture my experience for posterity.
 
 ## Stage 1: The group interview
