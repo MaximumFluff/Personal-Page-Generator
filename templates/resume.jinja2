@@ -2,6 +2,7 @@
 {% block content %}
 <h1>$ cat resume.txt</h1>
 <hr>
+<a href="alex_jacobs_resume.pdf">A PDF version of this resume can be found here</a>
 {% for item in resume_data %}
 <div class="resume-container">
   <h3>{{ item.company }} | {{item.time}} | {{ item.location }}</h3>
