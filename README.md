@@ -36,3 +36,4 @@ This project is configured using the `uv` package manager for python
 - [x] Change logic for created_by, updated_by for articles (Markdown metadata?)
 - [ ] Type annotations?
 - [ ] Fix folder structure
+- [ ] Handle inputting commit message for generator in the publishing script

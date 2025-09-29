@@ -28,4 +28,5 @@ alias ll="eza --icons --header -l"
 
 ## duf
 
+---
 Do you enjoy checking the remaining space of your drives with `df` but hate the way it's formatted? `duf` will print out the information in a very human readable and aesthetic way. [Installation and usage instructions for duf can be found here](https://github.com/muesli/duf)
