@@ -1,6 +1,6 @@
-# This script takes the generated output, copies it to a seperate git repo which is then published and used for static site hosting on Cloudflare
-
 #!/bin/bash
+
+# This script takes the generated output, copies it to a seperate git repo which is then published and used for static site hosting on Cloudflare
 
 # Absolute directory for generated files from creation script
 generated_directory="/home/alex/Documents/Personal-Page-Generator"
@@ -8,6 +8,9 @@ generated_directory="/home/alex/Documents/Personal-Page-Generator"
 publish_directory="/home/alex/Documents/Personal-Page"
 # Timestamp for git commit messages
 timestamp=$(date '+%d-%m-%Y %H:%M:%S')
+
+echo "Commiting latest generator changes if any..."
+git push origin master
 
 echo "Generating static files now..."
 cd "$generated_directory"
