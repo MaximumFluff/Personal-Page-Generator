@@ -24,7 +24,7 @@ then
 fi
 
 # Copy entire contents of generated personal page to output git folder
-cp -a /home/alex/Documents/Personal-Page-Generator/Code/public/. "$publish_directory"
+cp -a /home/alex/Documents/Code/Personal-Page-Generator/public/. "$publish_directory"
 cd "$publish_directory"
 git add *
 git commit -m "Published latest version of personal page: $timestamp"
