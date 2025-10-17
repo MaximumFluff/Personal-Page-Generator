@@ -10,7 +10,7 @@ It's a safe assumption that you are somewhat familiar with floating window manag
 
 Now imagine: what if you did not have to resize the windows yourself? what if, when you open a new program it automatically resizes itself to take up the maximum space allowed, without overlapping the windows?
 
-![A screenshot of my desktop, with several windows open. Half of the screen is taken up by Markdown writing software. the second half is split between two windows. Top is the Zed code editor, the bottom is Spotify](./images/tiling-window-example.png "Screenshot of my desktop")
+![A screenshot of my desktop, with several windows open. Half of the screen is taken up by Markdown writing software. the second half is split between two windows. Top is the Zed code editor, the bottom is Spotify](/images/tiling-window-example.png "Screenshot of my desktop")
 
 Tiling window managers do this for you, "tiling" windows on your screen. (I'm sure you got the hint from the name) All actions are controlled through keyboard shortcuts (I believe most also allow mouse operation) allowing for quick and efficient control over your workflow. For developers like me that usually need several windows open simultaneously (Documentation, Docker, text editor, etc...) I have found that this has had a surprising effect on my efficiency.
 
