@@ -3,9 +3,9 @@
 # This script takes the generated output, copies it to a seperate git repo which is then published and used for static site hosting on Cloudflare
 
 # Absolute directory for generated files from creation script
-generated_directory="/home/alex/Documents/Personal-Page-Generator"
+generated_directory="/home/alex/Documents/Code/Personal-Page-Generator"
 # Absolute directory for generated output git repo
-publish_directory="/home/alex/Documents/Personal-Page"
+publish_directory="/home/alex/Documents/Code/Personal-Page"
 # Timestamp for git commit messages
 timestamp=$(date '+%d-%m-%Y %H:%M:%S')
 
@@ -24,7 +24,7 @@ then
 fi
 
 # Copy entire contents of generated personal page to output git folder
-cp -a /home/alex/Documents/Personal-Page-Generator/public/. "$publish_directory"
+cp -a /home/alex/Documents/Personal-Page-Generator/Code/public/. "$publish_directory"
 cd "$publish_directory"
 git add *
 git commit -m "Published latest version of personal page: $timestamp"
