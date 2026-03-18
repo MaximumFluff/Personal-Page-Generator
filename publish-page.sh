@@ -9,8 +9,8 @@ publish_directory="/home/alex/Documents/Code/Personal-Page"
 # Timestamp for git commit messages
 timestamp=$(date '+%d-%m-%Y %H:%M:%S')
 
-echo "Commiting latest generator changes if any..."
-git push origin master
+#echo "Commiting latest generator changes if any..."
+#git push origin master
 
 echo "Generating static files now..."
 cd "$generated_directory"
