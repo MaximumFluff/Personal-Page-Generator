@@ -1,9 +1,11 @@
 article_name: Tiling window managers part 2: 2 Hyprland 2 Furious: Config drift
 date_created: 18/03/2026
+date_modified: 19/03/2026
 
 Due to some regressions in COSMIC, I had moved back to KDE for some months, finding myself missing the tiling features but afraid of the potentially daunting task of configuring one. Turns out, getting a functional [Hyprland](https://hypr.land) config wasn't the pain I thought it was.
 
 ## The setup
+---
 
 Reading documentation is one of the most important skills a developer can have. There is no better test of this than reading the Hyprland wiki when installing. The base package itself does not come with everything one would want and there is a remarkable amount of choice that goes into customizing your Hyprland setup.
 
@@ -49,8 +51,10 @@ yay -S "${yayPackages[@]}"
 ```
 
 ## Configuration and GNU Stow
+---
 
 ### The config part
+---
 
 My current setup is running 95% default configuration options. Every part of Hyprland either comes with a default configuration or the wiki will have one that you can copy and paste. The only significant changes I've made is that I removed window rounding from window borders and added some keybinds I missed from COSMIC:
 
@@ -66,6 +70,7 @@ bind = $mainMod, B, exec, $browser
 ```
 
 ### The GNU Stow part
+---
 
 GNU Stow is a fancy little program I've been using, that has been described as a "dotfile farm manager"
 
@@ -76,10 +81,12 @@ If you find my explanation lacking, you can [read a better one from the blog of 
 What this allows for me, is my dotfiles are now managed with Git, along with my install script. As part of the script, my dotfiles are copied over and stowed after package installation. When installing Arch on my laptop, I had my setup ready to go within minutes of the OS install finishing.
 
 ### The actual dotfiles
+---
 
 You can browse my dotfiles [over here on GitHub](https://github.com/MaximumFluff/dotfiles) to get a better idea of my setup.
 
 ## The experience
+---
 
 Good lord, and I thought COSMIC was smooth! Hyprland is lightning fast, quite lightweight and customizable to an almost infinite amount! Within an hour of using it I knew it was going to be my daily driver. I can tell why customizing and posting Hyprland configurations to Reddit has become such a popular pasttime.
 
